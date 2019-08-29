@@ -1,0 +1,35 @@
+body{
+	background-color: white;
+}
+main{
+	min-height: 90vh;
+}
+.filter .col .card-body{
+	display: inline-block;
+	background: #eaeaea;
+	border-radius: 20px;
+}
+.filter .col .card-body:hover{
+	background: grey;
+	cursor: pointer;
+}
+.cari{
+	background: #eaeaea;
+	border-radius: 20px;
+	padding: 20px 30px;
+	border: none;
+}
+.cari:focus{
+	background: #eaeaea;
+}
+.card{
+	border-radius: 20px;
+	overflow: hidden;
+}
+.card:hover{
+	box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+}
+.wrap{
+	width: 70%;
+	flex-wrap:wrap;
+}
