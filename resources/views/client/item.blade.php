@@ -11,11 +11,11 @@
 				<h6>Unit: {{$product->unit}}</h6>
 				<p class="my-4">{{$product->description}}</p>
 				
-				<form class="col-12" action="/product/{{$product->id}}/order" method="post">
+				<form class="col-12" action="/product/{{$product->id}}/order" method="POST">
 					@csrf
 					<div class="form-group col-5">
 						<label>Quantity</label>
-						<input class="form-control col-3" placeholder="Quantity" type="number" value="1"></input>
+						<input class="form-control col-3" placeholder="Quantity" type="number" value="1" name="quantity"></input>
 					</div>
 					<button class="btn btn-primary" style="border-radius: 30px; " type="submit"><b>Bayar Sekarang</b></button>
 				</form>

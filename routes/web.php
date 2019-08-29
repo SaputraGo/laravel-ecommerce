@@ -18,11 +18,13 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function(){
 	Route::get('/product/create', 'ProductController@create');	
 	Route::post('/product/add', 'ProductController@add');	
 	Route::get('/product/{id}/edit', 'ProductController@edit');	
-	Route::post('/product/{id}/update', 'ProductController@update');	
+	Route::post('/product/{id}/update', 'ProductController@update');
 	Route::get('/product/{id}/delete', 'ProductController@delete');	
-	Route::post('/product/{id}/order', 'OrderController@order');	
+});
+Route::group(['middleware' => ['auth']], function(){
+	Route::post('/product/{id}/order', 'OrderController@order');
+	Route::post('/order/tambah', 'OrderController@add');	
 });
 Route::get('/', 'HomeController@index');
 Route::get('/product/{id}/detail', 'ProductController@detail');
-
 Auth::routes();
